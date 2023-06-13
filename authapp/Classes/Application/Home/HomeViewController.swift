@@ -1,6 +1,6 @@
 import UIKit
 
-class AppRootViewController: UIViewController {
+class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
