@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EF92A384CD0005627F6 /* SessionStore.swift */; };
+		03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B10EFC2A387ABC005627F6 /* SignUpForm.xib */; };
+		03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EFE2A387B7F005627F6 /* SignUpForm.swift */; };
 		03FF59D42A36F050009753FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF59D32A36F050009753FF /* AppDelegate.swift */; };
 		03FF59DD2A36F052009753FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FF59DC2A36F052009753FF /* Assets.xcassets */; };
 		03FF59E02A36F052009753FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FF59DE2A36F052009753FF /* LaunchScreen.storyboard */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		03B10EF92A384CD0005627F6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		03B10EFC2A387ABC005627F6 /* SignUpForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpForm.xib; sourceTree = "<group>"; };
+		03B10EFE2A387B7F005627F6 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
 		03FF59D02A36F050009753FF /* authapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = authapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FF59D32A36F050009753FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03FF59DC2A36F052009753FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 				03B10EF92A384CD0005627F6 /* SessionStore.swift */,
 			);
 			path = DataStore;
+			sourceTree = "<group>";
+		};
+		03B10EFB2A387AA9005627F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03B10EFC2A387ABC005627F6 /* SignUpForm.xib */,
+				03B10EFE2A387B7F005627F6 /* SignUpForm.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		03FF59C72A36F050009753FF = {
@@ -167,6 +180,7 @@
 		03FF5A0A2A370542009753FF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				03B10EFB2A387AA9005627F6 /* View */,
 				03FF5A0B2A370551009753FF /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -283,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03FF59E02A36F052009753FF /* LaunchScreen.storyboard in Resources */,
+				03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */,
 				03FF59DD2A36F052009753FF /* Assets.xcassets in Resources */,
 				03FF5A0E2A37065F009753FF /* GoogleService-Info.plist in Resources */,
 			);
@@ -309,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */,
 				03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */,
 				03FF5A0C2A370551009753FF /* HomeViewController.swift in Sources */,
 				03FF5A062A36F0D7009753FF /* AppRootViewController.swift in Sources */,
