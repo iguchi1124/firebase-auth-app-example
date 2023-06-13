@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     override func viewDidLoad() {
@@ -6,6 +7,7 @@ class HomeViewController: UIViewController {
 
         view.backgroundColor = .white
         let signUpForm = SignUpForm()
+        signUpForm.delegate = self
         signUpForm.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(signUpForm)
         NSLayoutConstraint.activate([
@@ -14,5 +16,12 @@ class HomeViewController: UIViewController {
             signUpForm.leftAnchor.constraint(equalTo: view.leftAnchor),
             signUpForm.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
+    }
+}
+
+extension HomeViewController: SignUpFormDelegate {
+    func submit(email: String, password: String) {
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        Auth.auth().currentUser?.link(with: credential)
     }
 }
