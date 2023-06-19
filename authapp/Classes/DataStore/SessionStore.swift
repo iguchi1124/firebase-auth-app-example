@@ -12,4 +12,8 @@ class SessionStore {
     func getIdToken() -> String? {
         return UserDefaults.standard.string(forKey: idTokenKey)
     }
+
+    func clear() {
+        UserDefaults.standard.removeObject(forKey: idTokenKey)
+    }
 }

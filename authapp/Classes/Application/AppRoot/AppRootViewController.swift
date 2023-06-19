@@ -2,10 +2,10 @@ import UIKit
 import FirebaseAuth
 
 class AppRootViewController: UIViewController {
-    private let loginButton: UIButton = {
+    private let startButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Start with anonymous user", for: .normal)
         button.setTitleColor(.blue, for: .normal)
 
         return button
@@ -16,14 +16,14 @@ class AppRootViewController: UIViewController {
 
         view.backgroundColor = .white
 
-        loginButton.addAction(.init { _ in self.login() }, for: .touchUpInside)
+        startButton.addAction(.init { _ in self.login() }, for: .touchUpInside)
 
-        view.addSubview(loginButton)
+        view.addSubview(startButton)
         NSLayoutConstraint.activate([
-            loginButton.widthAnchor.constraint(equalToConstant: 300),
-            loginButton.heightAnchor.constraint(equalToConstant: 100),
-            loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            startButton.widthAnchor.constraint(equalToConstant: 300),
+            startButton.heightAnchor.constraint(equalToConstant: 100),
+            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 
@@ -37,6 +37,8 @@ class AppRootViewController: UIViewController {
         }
 
         let homeViewController = HomeViewController()
-        self.navigationController?.pushViewController(homeViewController, animated: true)
+        let navigationViewController = UINavigationController(rootViewController: homeViewController)
+        navigationViewController.modalPresentationStyle = .fullScreen
+        present(navigationViewController, animated: true)
     }
 }
