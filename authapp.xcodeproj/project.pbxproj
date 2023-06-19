@@ -11,6 +11,7 @@
 		037767372A40D991009EFE4A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767362A40D991009EFE4A /* SignInViewController.swift */; };
 		0377673A2A40D9EA009EFE4A /* SignInForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037767392A40D9EA009EFE4A /* SignInForm.xib */; };
 		0377673C2A40D9F7009EFE4A /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673B2A40D9F7009EFE4A /* SignInForm.swift */; };
+		0377673F2A40DF15009EFE4A /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */; };
 		03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EF92A384CD0005627F6 /* SessionStore.swift */; };
 		03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B10EFC2A387ABC005627F6 /* SignUpForm.xib */; };
 		03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EFE2A387B7F005627F6 /* SignUpForm.swift */; };
@@ -48,6 +49,7 @@
 		037767362A40D991009EFE4A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		037767392A40D9EA009EFE4A /* SignInForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInForm.xib; sourceTree = "<group>"; };
 		0377673B2A40D9F7009EFE4A /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
+		0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
 		03B10EF92A384CD0005627F6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		03B10EFC2A387ABC005627F6 /* SignUpForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpForm.xib; sourceTree = "<group>"; };
 		03B10EFE2A387B7F005627F6 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 				0377673B2A40D9F7009EFE4A /* SignInForm.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0377673D2A40DEC2009EFE4A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		03B10EF72A384CB3005627F6 /* Application */ = {
@@ -199,8 +209,9 @@
 		03FF5A032A36F09B009753FF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				03B10EF82A384CC3005627F6 /* DataStore */,
 				03B10EF72A384CB3005627F6 /* Application */,
+				03B10EF82A384CC3005627F6 /* DataStore */,
+				0377673D2A40DEC2009EFE4A /* Extension */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -363,6 +374,7 @@
 			files = (
 				037767372A40D991009EFE4A /* SignInViewController.swift in Sources */,
 				03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */,
+				0377673F2A40DF15009EFE4A /* UIViewController+Errors.swift in Sources */,
 				03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */,
 				03FF5A0C2A370551009753FF /* SignUpViewController.swift in Sources */,
 				03FF5A062A36F0D7009753FF /* AppRootViewController.swift in Sources */,

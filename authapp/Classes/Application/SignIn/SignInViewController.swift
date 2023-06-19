@@ -21,16 +21,17 @@ class SignInViewController: UIViewController {
 
 extension SignInViewController: SignInFormDelegate {
     func submit(email: String, password: String) {
-        SessionStore.shared.clear()
-
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            guard let user = authResult?.user else { return }
+            if let error = error {
+                self.showMessagePrompt(error.localizedDescription)
+                return
+            }
+
+            self.navigationController?.popToRootViewController(animated: true)
         }
 
         Auth.auth().currentUser?.getIDToken { idToken, error in
             SessionStore.shared.setIdToken(idToken!)
         }
-
-        self.navigationController?.popToRootViewController(animated: true)
     }
 }

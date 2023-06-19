@@ -21,10 +21,13 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController: SignUpFormDelegate {
     func submit(email: String, password: String) {
-        SessionStore.shared.clear()
-
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            guard let user = authResult?.user else { return }
+            if let error = error {
+                self.showMessagePrompt(error.localizedDescription)
+                return
+            }
+
+            self.navigationController?.popToRootViewController(animated: true)
         }
 
         let credential = EmailAuthProvider.credential(withEmail: email, password: password)
@@ -34,7 +37,5 @@ extension SignUpViewController: SignUpFormDelegate {
         Auth.auth().currentUser?.getIDToken { idToken, error in
             SessionStore.shared.setIdToken(idToken!)
         }
-
-        self.navigationController?.popToRootViewController(animated: true)
     }
 }
