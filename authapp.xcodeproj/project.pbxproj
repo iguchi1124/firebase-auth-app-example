@@ -12,6 +12,9 @@
 		0377673A2A40D9EA009EFE4A /* SignInForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037767392A40D9EA009EFE4A /* SignInForm.xib */; };
 		0377673C2A40D9F7009EFE4A /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673B2A40D9F7009EFE4A /* SignInForm.swift */; };
 		0377673F2A40DF15009EFE4A /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */; };
+		037767422A41148C009EFE4A /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767412A41148C009EFE4A /* PasswordResetViewController.swift */; };
+		037767452A4114F2009EFE4A /* PasswordResetForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037767442A4114F2009EFE4A /* PasswordResetForm.xib */; };
+		037767472A411555009EFE4A /* PasswordResetForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767462A411555009EFE4A /* PasswordResetForm.swift */; };
 		03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EF92A384CD0005627F6 /* SessionStore.swift */; };
 		03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B10EFC2A387ABC005627F6 /* SignUpForm.xib */; };
 		03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EFE2A387B7F005627F6 /* SignUpForm.swift */; };
@@ -50,6 +53,9 @@
 		037767392A40D9EA009EFE4A /* SignInForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInForm.xib; sourceTree = "<group>"; };
 		0377673B2A40D9F7009EFE4A /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
+		037767412A41148C009EFE4A /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		037767442A4114F2009EFE4A /* PasswordResetForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordResetForm.xib; sourceTree = "<group>"; };
+		037767462A411555009EFE4A /* PasswordResetForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetForm.swift; sourceTree = "<group>"; };
 		03B10EF92A384CD0005627F6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		03B10EFC2A387ABC005627F6 /* SignUpForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpForm.xib; sourceTree = "<group>"; };
 		03B10EFE2A387B7F005627F6 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
@@ -128,6 +134,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		037767402A411430009EFE4A /* PasswordReset */ = {
+			isa = PBXGroup;
+			children = (
+				037767432A4114D1009EFE4A /* View */,
+				037767412A41148C009EFE4A /* PasswordResetViewController.swift */,
+			);
+			path = PasswordReset;
+			sourceTree = "<group>";
+		};
+		037767432A4114D1009EFE4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				037767442A4114F2009EFE4A /* PasswordResetForm.xib */,
+				037767462A411555009EFE4A /* PasswordResetForm.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		03B10EF72A384CB3005627F6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +159,7 @@
 				037767322A40336D009EFE4A /* Home */,
 				037767352A40D953009EFE4A /* SignIn */,
 				03FF5A0A2A370542009753FF /* SignUp */,
+				037767402A411430009EFE4A /* PasswordReset */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -345,6 +370,7 @@
 			files = (
 				0377673A2A40D9EA009EFE4A /* SignInForm.xib in Resources */,
 				03FF59E02A36F052009753FF /* LaunchScreen.storyboard in Resources */,
+				037767452A4114F2009EFE4A /* PasswordResetForm.xib in Resources */,
 				03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */,
 				03FF59DD2A36F052009753FF /* Assets.xcassets in Resources */,
 				03FF5A0E2A37065F009753FF /* GoogleService-Info.plist in Resources */,
@@ -373,9 +399,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				037767372A40D991009EFE4A /* SignInViewController.swift in Sources */,
+				037767422A41148C009EFE4A /* PasswordResetViewController.swift in Sources */,
 				03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */,
 				0377673F2A40DF15009EFE4A /* UIViewController+Errors.swift in Sources */,
 				03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */,
+				037767472A411555009EFE4A /* PasswordResetForm.swift in Sources */,
 				03FF5A0C2A370551009753FF /* SignUpViewController.swift in Sources */,
 				03FF5A062A36F0D7009753FF /* AppRootViewController.swift in Sources */,
 				03FF59D42A36F050009753FF /* AppDelegate.swift in Sources */,
