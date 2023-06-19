@@ -5,7 +5,7 @@ class SignUpViewController: UIViewController {
     private let passwordResetButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Password reset", for: .normal)
+        button.setTitle("Forgot password?", for: .normal)
         button.setTitleColor(.blue, for: .normal)
 
         return button
