@@ -11,7 +11,7 @@
 		037767372A40D991009EFE4A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767362A40D991009EFE4A /* SignInViewController.swift */; };
 		0377673A2A40D9EA009EFE4A /* SignInForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037767392A40D9EA009EFE4A /* SignInForm.xib */; };
 		0377673C2A40D9F7009EFE4A /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673B2A40D9F7009EFE4A /* SignInForm.swift */; };
-		0377673F2A40DF15009EFE4A /* UIViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */; };
+		0377673F2A40DF15009EFE4A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377673E2A40DF15009EFE4A /* UIViewController+Extensions.swift */; };
 		037767422A41148C009EFE4A /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767412A41148C009EFE4A /* PasswordResetViewController.swift */; };
 		037767452A4114F2009EFE4A /* PasswordResetForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037767442A4114F2009EFE4A /* PasswordResetForm.xib */; };
 		037767472A411555009EFE4A /* PasswordResetForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767462A411555009EFE4A /* PasswordResetForm.swift */; };
@@ -52,7 +52,7 @@
 		037767362A40D991009EFE4A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		037767392A40D9EA009EFE4A /* SignInForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInForm.xib; sourceTree = "<group>"; };
 		0377673B2A40D9F7009EFE4A /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
-		0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Errors.swift"; sourceTree = "<group>"; };
+		0377673E2A40DF15009EFE4A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		037767412A41148C009EFE4A /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		037767442A4114F2009EFE4A /* PasswordResetForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordResetForm.xib; sourceTree = "<group>"; };
 		037767462A411555009EFE4A /* PasswordResetForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetForm.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		0377673D2A40DEC2009EFE4A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0377673E2A40DF15009EFE4A /* UIViewController+Errors.swift */,
+				0377673E2A40DF15009EFE4A /* UIViewController+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 				037767372A40D991009EFE4A /* SignInViewController.swift in Sources */,
 				037767422A41148C009EFE4A /* PasswordResetViewController.swift in Sources */,
 				03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */,
-				0377673F2A40DF15009EFE4A /* UIViewController+Errors.swift in Sources */,
+				0377673F2A40DF15009EFE4A /* UIViewController+Extensions.swift in Sources */,
 				03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */,
 				037767472A411555009EFE4A /* PasswordResetForm.swift in Sources */,
 				03FF5A0C2A370551009753FF /* SignUpViewController.swift in Sources */,

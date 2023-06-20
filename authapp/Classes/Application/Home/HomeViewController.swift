@@ -71,12 +71,12 @@ class HomeViewController: UIViewController {
     func refresh() {
         guard let user = self.user else { return }
         if user.isAnonymous {
+            signInButton.isHidden = false
             signUpButton.isHidden = false
         } else {
+            signInButton.isHidden = true
             signUpButton.isHidden = true
         }
-
-        print(user.isAnonymous)
     }
 
     override func viewWillAppear(_ animated: Bool) {
