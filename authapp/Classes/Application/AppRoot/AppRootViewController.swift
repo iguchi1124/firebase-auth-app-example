@@ -29,7 +29,12 @@ class AppRootViewController: UIViewController {
 
     private func login() {
         if Auth.auth().currentUser == nil {
-            Auth.auth().signInAnonymously()
+            Auth.auth().signInAnonymously() { _, error in
+                if let error = error {
+                    self.showMessagePrompt(error.localizedDescription)
+                    return
+                }
+            }
         }
 
         Auth.auth().currentUser?.getIDToken { idToken, error in
