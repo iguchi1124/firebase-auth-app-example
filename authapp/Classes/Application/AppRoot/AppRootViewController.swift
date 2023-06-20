@@ -5,7 +5,7 @@ class AppRootViewController: UIViewController {
     private let startButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Start with anonymous user", for: .normal)
+        button.setTitle("Start", for: .normal)
         button.setTitleColor(.blue, for: .normal)
 
         return button
