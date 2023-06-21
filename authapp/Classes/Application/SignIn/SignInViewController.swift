@@ -48,11 +48,12 @@ extension SignInViewController: SignInFormDelegate {
                 return
             }
 
-            self.navigationController?.popToRootViewController(animated: true)
-        }
+            guard let user = authResult?.user else { return }
+            user.getIDToken { idToken, error in
+                SessionStore.shared.setIdToken(idToken!)
+            }
 
-        Auth.auth().currentUser?.getIDToken { idToken, error in
-            SessionStore.shared.setIdToken(idToken!)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }

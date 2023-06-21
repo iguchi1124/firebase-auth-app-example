@@ -49,15 +49,23 @@ extension SignUpViewController: SignUpFormDelegate {
                 return
             }
 
-            self.navigationController?.popToRootViewController(animated: true)
-        }
+            let credential = EmailAuthProvider.credential(withEmail: email, password: password)
 
-        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
-        Auth.auth().currentUser?.link(with: credential)
+            guard let user = authResult?.user else { return }
+            user.link(with: credential) { authResult, error in
+                if let error = error {
+                    self.showMessagePrompt(error.localizedDescription)
+                    return
+                }
 
+                guard let user = authResult?.user else { return }
 
-        Auth.auth().currentUser?.getIDToken { idToken, error in
-            SessionStore.shared.setIdToken(idToken!)
+                user.getIDToken { idToken, error in
+                    SessionStore.shared.setIdToken(idToken!)
+                }
+
+                self.navigationController?.popToRootViewController(animated: true)
+            }
         }
     }
 }

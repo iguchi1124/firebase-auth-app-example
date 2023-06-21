@@ -28,22 +28,26 @@ class AppRootViewController: UIViewController {
     }
 
     private func login() {
+        let homeViewController = HomeViewController()
+        let navigationViewController = UINavigationController(rootViewController: homeViewController)
+        navigationViewController.modalPresentationStyle = .fullScreen
+
         if Auth.auth().currentUser == nil {
-            Auth.auth().signInAnonymously() { _, error in
+            Auth.auth().signInAnonymously() { authResult, error in
                 if let error = error {
                     self.showMessagePrompt(error.localizedDescription)
                     return
                 }
+
+                guard let user = authResult?.user else { return }
+                user.getIDToken { idToken, error in
+                    SessionStore.shared.setIdToken(idToken!)
+                }
+
+                self.present(navigationViewController, animated: true)
             }
+        } else {
+            self.present(navigationViewController, animated: true)
         }
-
-        Auth.auth().currentUser?.getIDToken { idToken, error in
-            SessionStore.shared.setIdToken(idToken!)
-        }
-
-        let homeViewController = HomeViewController()
-        let navigationViewController = UINavigationController(rootViewController: homeViewController)
-        navigationViewController.modalPresentationStyle = .fullScreen
-        present(navigationViewController, animated: true)
     }
 }
