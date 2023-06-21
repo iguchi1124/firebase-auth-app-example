@@ -2,15 +2,6 @@ import UIKit
 import FirebaseAuth
 
 class SignUpViewController: UIViewController {
-    private let passwordResetButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Forgot password?", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-
-        return button
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,18 +17,6 @@ class SignUpViewController: UIViewController {
             signUpForm.leftAnchor.constraint(equalTo: view.leftAnchor),
             signUpForm.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
-
-        view.addSubview(passwordResetButton)
-        passwordResetButton.addAction(.init { _ in self.presentPasswordResetView() }, for: .touchUpInside)
-        NSLayoutConstraint.activate([
-            passwordResetButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
-            passwordResetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-    }
-
-    private func presentPasswordResetView() {
-        let passwordResetViewController = PasswordResetViewController()
-        self.navigationController?.pushViewController(passwordResetViewController, animated: true)
     }
 }
 
