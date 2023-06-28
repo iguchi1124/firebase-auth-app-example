@@ -15,6 +15,9 @@
 		037767422A41148C009EFE4A /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767412A41148C009EFE4A /* PasswordResetViewController.swift */; };
 		037767452A4114F2009EFE4A /* PasswordResetForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037767442A4114F2009EFE4A /* PasswordResetForm.xib */; };
 		037767472A411555009EFE4A /* PasswordResetForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037767462A411555009EFE4A /* PasswordResetForm.swift */; };
+		038A525E2A4BDDDA005DEF20 /* SIgnInWithCustomTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A525D2A4BDDDA005DEF20 /* SIgnInWithCustomTokenViewController.swift */; };
+		038A52612A4BDE19005DEF20 /* SignInWithCustomTokenForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A52602A4BDE19005DEF20 /* SignInWithCustomTokenForm.xib */; };
+		038A52632A4BDE33005DEF20 /* SignInWithCustomTokenForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A52622A4BDE33005DEF20 /* SignInWithCustomTokenForm.swift */; };
 		03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EF92A384CD0005627F6 /* SessionStore.swift */; };
 		03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B10EFC2A387ABC005627F6 /* SignUpForm.xib */; };
 		03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B10EFE2A387B7F005627F6 /* SignUpForm.swift */; };
@@ -56,6 +59,9 @@
 		037767412A41148C009EFE4A /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		037767442A4114F2009EFE4A /* PasswordResetForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordResetForm.xib; sourceTree = "<group>"; };
 		037767462A411555009EFE4A /* PasswordResetForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetForm.swift; sourceTree = "<group>"; };
+		038A525D2A4BDDDA005DEF20 /* SIgnInWithCustomTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInWithCustomTokenViewController.swift; sourceTree = "<group>"; };
+		038A52602A4BDE19005DEF20 /* SignInWithCustomTokenForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInWithCustomTokenForm.xib; sourceTree = "<group>"; };
+		038A52622A4BDE33005DEF20 /* SignInWithCustomTokenForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithCustomTokenForm.swift; sourceTree = "<group>"; };
 		03B10EF92A384CD0005627F6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		03B10EFC2A387ABC005627F6 /* SignUpForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpForm.xib; sourceTree = "<group>"; };
 		03B10EFE2A387B7F005627F6 /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
@@ -152,9 +158,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		038A525C2A4BDDC1005DEF20 /* SignInWithCustomToken */ = {
+			isa = PBXGroup;
+			children = (
+				038A525F2A4BDE08005DEF20 /* View */,
+				038A525D2A4BDDDA005DEF20 /* SIgnInWithCustomTokenViewController.swift */,
+			);
+			path = SignInWithCustomToken;
+			sourceTree = "<group>";
+		};
+		038A525F2A4BDE08005DEF20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				038A52602A4BDE19005DEF20 /* SignInWithCustomTokenForm.xib */,
+				038A52622A4BDE33005DEF20 /* SignInWithCustomTokenForm.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		03B10EF72A384CB3005627F6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				038A525C2A4BDDC1005DEF20 /* SignInWithCustomToken */,
 				03FF5A042A36F0B0009753FF /* AppRoot */,
 				037767322A40336D009EFE4A /* Home */,
 				037767352A40D953009EFE4A /* SignIn */,
@@ -374,6 +399,7 @@
 				03B10EFD2A387ABC005627F6 /* SignUpForm.xib in Resources */,
 				03FF59DD2A36F052009753FF /* Assets.xcassets in Resources */,
 				03FF5A0E2A37065F009753FF /* GoogleService-Info.plist in Resources */,
+				038A52612A4BDE19005DEF20 /* SignInWithCustomTokenForm.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +427,8 @@
 				037767372A40D991009EFE4A /* SignInViewController.swift in Sources */,
 				037767422A41148C009EFE4A /* PasswordResetViewController.swift in Sources */,
 				03B10EFF2A387B7F005627F6 /* SignUpForm.swift in Sources */,
+				038A52632A4BDE33005DEF20 /* SignInWithCustomTokenForm.swift in Sources */,
+				038A525E2A4BDDDA005DEF20 /* SIgnInWithCustomTokenViewController.swift in Sources */,
 				0377673F2A40DF15009EFE4A /* UIViewController+Extensions.swift in Sources */,
 				03B10EFA2A384CD0005627F6 /* SessionStore.swift in Sources */,
 				037767472A411555009EFE4A /* PasswordResetForm.swift in Sources */,

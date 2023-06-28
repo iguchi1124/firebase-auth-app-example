@@ -32,6 +32,15 @@ class HomeViewController: UIViewController {
         return button
     }()
 
+    private let signInWithCustomTokenButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Sign in with custom token", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +49,7 @@ class HomeViewController: UIViewController {
         logoutButton.addAction(.init { _ in self.logout() }, for: .touchUpInside)
         signInButton.addAction(.init { _ in self.presentSignInView() }, for: .touchUpInside)
         signUpButton.addAction(.init { _ in self.presentSignUpView() }, for: .touchUpInside)
+        signInWithCustomTokenButton.addAction(.init { _ in self.presentSignInWithCustomTokenView() }, for: .touchUpInside)
 
         view.addSubview(logoutButton)
         NSLayoutConstraint.activate([
@@ -65,6 +75,14 @@ class HomeViewController: UIViewController {
             signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
 
+        view.addSubview(signInWithCustomTokenButton)
+        NSLayoutConstraint.activate([
+            signInWithCustomTokenButton.widthAnchor.constraint(equalToConstant: 300),
+            signInWithCustomTokenButton.heightAnchor.constraint(equalToConstant: 100),
+            signInWithCustomTokenButton.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 50),
+            signInWithCustomTokenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+
         refresh()
     }
 
@@ -86,10 +104,6 @@ class HomeViewController: UIViewController {
             self.user = user
             self.refresh()
         }
-
-        guard let idToken = SessionStore.shared.getIdToken() else { return }
-        print(idToken)
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -116,5 +130,10 @@ class HomeViewController: UIViewController {
     private func presentSignInView() {
         let signInViewController = SignInViewController()
         self.navigationController?.pushViewController(signInViewController, animated: true)
+    }
+
+    private func presentSignInWithCustomTokenView() {
+        let signInWithCustomTokenViewController = SignInWithCustomTokenViewController()
+        self.navigationController?.pushViewController(signInWithCustomTokenViewController, animated: true)
     }
 }
